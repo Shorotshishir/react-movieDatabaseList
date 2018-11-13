@@ -12,7 +12,7 @@ class App extends Component {
   performSearch(searchTerm){
     console.log('Search with TMDB')
     const api_key= 'e636871c32d8612f210710f411a807df'
-    const urlString='https://api.themoviedb.org/3/search/movie?api_key='+api_key
+    const urlString='https://api.themoviedb.org/4/search/movie?api_key='+api_key
     let url=''
     // const api_key= ''
     if (searchTerm==='') {
@@ -26,9 +26,9 @@ class App extends Component {
       success:(searchResults)=>{
         const results = searchResults.results
         let movieRows = []
-
+        
         results.forEach(movie => {
-            if (movie.poster_path ==='') {
+            if (movie.poster_path ===undefined) {
                 movie.poster_src =''
             } else {
                 movie.poster_src ='https://image.tmdb.org/t/p/w185'+ movie.poster_path
@@ -39,18 +39,29 @@ class App extends Component {
           movieRows.push(movieRow)
         });
         this.setState({rows: movieRows})
-        console.log({movieRows})
+        // console.log({movieRows})
       },
-      error:(xhr, status, err)=>{
-        console.error("data fetch failed ! ! ! ")
-      }
+    //   error:(xhr, status, err)=>{
+    //     console.error("data fetch failed ! ! ! ")
+    //   }
     })
   }
 
+  defaultList(){
+    // const api_key= 'e636871c32d8612f210710f411a807df'
+    // const urlString='https://api.themoviedb.org/4/list/1?page=1&api_key='+api_key
+    // let url=''
+  }
+
   searchChangeHandler(event){
-      console.log(event.target.value)
+    console.log(event.target.value)
     const searchTerm = event.target.value
-    this.performSearch(searchTerm)
+    if (searchTerm) {
+        this.performSearch(searchTerm)
+    } else {
+        this.defaultList()
+    }
+    
   }
 
   render() {
