@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## The Search utility For MovieDatabase using react
+
+Thhis Utility uses ReactJS and TMDB API for searching movies
+
 ## Available Scripts
 
 In the project directory, you can run:
