@@ -4,11 +4,21 @@ import $ from 'jquery'
 import MovieRow from './component/MovieRows'
 
 class App extends Component {
+  /**
+   * @param  {} props
+   * @param  {} {super(props
+   * @param  {} this.performSearch(
+   */
   constructor(props){
     super(props)
     this.performSearch()
     this.state = {}
   }
+  /**
+   * @param  {} searchTerm
+   * @param  {} {console.log('SearchwithTMDB'
+   * @param  {leturl=''if(searchTerm===''} constapi_key='e636871c32d8612f210710f411a807df'consturlString='https
+   */
   performSearch(searchTerm){
     console.log('Search with TMDB')
     const api_key= 'e636871c32d8612f210710f411a807df'
@@ -52,7 +62,13 @@ class App extends Component {
     // const urlString='https://api.themoviedb.org/4/list/1?page=1&api_key='+api_key
     // let url=''
   }
-
+  /**
+   * @param  {} event
+   * @param  {} {console.log(event.target.value
+   * @param  {} constsearchTerm=event.target.valueif(searchTerm
+   * @param  {} {this.performSearch(searchTerm
+   * @param  {} }else{this.defaultList(
+   */
   searchChangeHandler(event){
     console.log(event.target.value)
     const searchTerm = event.target.value
@@ -63,7 +79,10 @@ class App extends Component {
     }
     
   }
-
+  /**
+   * @param  {} {return(<div><tableclassName='tableNavbar'><tbody><tr><td><imgwidth='50'src="tmdb_logo.svg"alt="tmdb"/></td><tdwidth='8'></td><td><h2>MoviesDBSearch</h2></td></tr></tbody></table><inputclassName='searchBar'type="text"placeholder='providesearchterm'onChange={this.searchChangeHandler.bind(this
+   * @param  {} }/>{this.state.rows}</div>
+   */
   render() {
     return (
       <div >
