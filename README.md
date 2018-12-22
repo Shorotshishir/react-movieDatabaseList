@@ -1,5 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-##The Movie Search Database
+## Screenshots
+
 ![alt text](https://github.com/Shorotshishir/react-movieDatabaseList/blob/master/src/screenshots/scr1.png)
 
 ## The Search utility For MovieDatabase using react
