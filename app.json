@@ -1,0 +1,17 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ],
+  "description": "",
+  "env": {
+  },
+  "formation": {
+  },
+  "name": "react-movieDatabaseList",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
